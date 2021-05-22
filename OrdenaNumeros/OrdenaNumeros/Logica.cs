@@ -102,5 +102,39 @@ namespace OrdenaNumeros
                 }
             }
         }
+        //procedo a copiar las otras funciones
+        public bool ganador()
+        {
+            bool condicionVictoria = true;
+
+            int valorBuscado = 0;
+
+            //Aqui recorremos la matriz de valores buscando para cada posición si el valor está en orden
+            for (int i = 0; i < 4; i++)
+            {
+                for (int j = 0; j < 4; j++)
+                {
+                    //incrementamos el valor buscado
+                    valorBuscado++;
+
+                    //Si los valores son diferentes, entonces todavía necesitamos seguir jugando!!!
+                    if (matrizValores[i, j] != valorBuscado)
+                    {
+                        // Validamos si estamos en la última casilla, el valor existente es 0,
+                        // el valor buscado ya llegó a 16 y la condición de victoria sigue siendo true
+                        if (matrizValores[i, j] == 0 && valorBuscado == 16 && condicionVictoria == true)
+                            condicionVictoria = true;
+
+                        // De lo contrario, es porque estamos en cualquier otra casilla y los valores
+                        // Todavía no son iguales
+                        else
+                            condicionVictoria = false;
+                    }
+                }
+            }
+            return condicionVictoria;
+
+        }
+
     }
 }

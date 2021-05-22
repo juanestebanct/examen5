@@ -53,6 +53,45 @@ namespace OrdenaNumeros
             posicionColumna = 0;
             matrizValores = new int[4, 4];
         }
+        //nuevas cosas 
+        public void evaluardatos()
+        {
+            int valorTemporal = 0;
 
+            //Validamos el valor superior a donde presionamos si está el cero
+            if (posicionFila > 0)
+            {
+                if (matrizValores[posicionFila - 1, posicionColumna] == 0)
+                {
+                    valorTemporal = matrizValores[posicionFila, posicionColumna];
+                    matrizValores[posicionFila, posicionColumna] = 0;
+                    matrizValores[posicionFila - 1, posicionColumna] = valorTemporal;
+                }
+            }
+
+            //Validamos el valor inferior a donde presionamos si está el cero
+            if (posicionFila < 3)
+            {
+                if (matrizValores[posicionFila + 1, posicionColumna] == 0)
+                {
+                    valorTemporal = matrizValores[posicionFila, posicionColumna];
+                    matrizValores[posicionFila, posicionColumna] = 0;
+                    matrizValores[posicionFila + 1, posicionColumna] = valorTemporal;
+                }
+            }
+
+            //Validamos el valor izquierdo a donde presionamos si está el cero
+            if (posicionColumna > 0)
+            {
+                if (matrizValores[posicionFila, posicionColumna - 1] == 0)
+                {
+                    valorTemporal = matrizValores[posicionFila, posicionColumna];
+                    matrizValores[posicionFila, posicionColumna] = 0;
+                    matrizValores[posicionFila, posicionColumna - 1] = valorTemporal;
+                }
+            }
+
+
+        }
     }
 }

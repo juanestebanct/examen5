@@ -10,7 +10,7 @@ namespace OrdenaNumeros
         Logica logicanumeros;
         private Button[,] matrizBotones;
 
-
+        //nigun cabio interesante
         /// <summary>
         /// Constructor de la clase Form1
         /// </summary>
@@ -208,6 +208,8 @@ namespace OrdenaNumeros
         {
             logicanumeros.Posicionfila = datoFila;
             logicanumeros.PosicionColumna = datoColumna;
+
+            //prueba para poder trabajar dos al mimos tiempo en los dos  
             int pera = datoColumna+datoFila;
 
             if (pera>20)

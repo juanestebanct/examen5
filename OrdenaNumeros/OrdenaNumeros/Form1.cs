@@ -210,6 +210,7 @@ namespace OrdenaNumeros
             logicanumeros.PosicionColumna = datoColumna;
             //Aqui evaluamos en la matrizValores, la posición correspondiente al botón presionado
             EvaluaPosicion();
+            int empanada;
 
             //Finalmente, se da la notificación si el valor se encuentra en la posición correcta
             NotificaPosicionCorrectaValor();

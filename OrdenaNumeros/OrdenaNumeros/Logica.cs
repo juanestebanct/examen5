@@ -4,13 +4,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
+
 namespace OrdenaNumeros
 {
     class Logica
     {
         private int[,] matrizValores;
         private int posicionFila, posicionColumna;
-        
 
         public int Posicionfila
         {
@@ -53,7 +53,44 @@ namespace OrdenaNumeros
             posicionColumna = 0;
             matrizValores = new int[4, 4];
         }
-        //nuevas cosas 
+
+        public void iniciarmatriz()
+        {
+            int valor = 0;
+
+            //Inicialmente se asignan los números del 0 al 15 en toda la matriz
+            for (int i = 0; i < 4; i++)
+            {
+                for (int j = 0; j < 4; j++)
+                {
+                    matrizValores[i, j] = valor;
+                    valor++;
+                }
+            }
+
+            //Luego, procedemos a cambiar los valores de posición de manera aleatoria
+
+            Random aleatorio = new Random();
+            int posicionHorizontal, posicionVertical, valorTemporal;
+
+            //Aqui desordenamos la matriz, calculando posiciones horizontales y
+            //verticales dentro de la matriz
+            for (int i = 0; i < 4; i++)
+            {
+                for (int j = 0; j < 4; j++)
+                {
+                    valorTemporal = matrizValores[i, j];
+                    posicionHorizontal = aleatorio.Next(4);
+                    posicionVertical = aleatorio.Next(4);
+
+                    matrizValores[i, j] = matrizValores[posicionHorizontal, posicionVertical];
+                    matrizValores[posicionHorizontal, posicionVertical] = valorTemporal;
+                }
+            }
+        }
+
+
+
         public void evaluardatos()
         {
             int valorTemporal = 0;
@@ -102,7 +139,7 @@ namespace OrdenaNumeros
                 }
             }
         }
-        //procedo a copiar las otras funciones
+
         public bool ganador()
         {
             bool condicionVictoria = true;
@@ -153,8 +190,5 @@ namespace OrdenaNumeros
             valoresEsperados[3, 3] = 0;
             return valoresEsperados;
         }
-
-
-
     }
 }

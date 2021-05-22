@@ -136,5 +136,25 @@ namespace OrdenaNumeros
 
         }
 
+        public int[,] notificacionpositivo(int totalFilas, int totalColumnas)
+        {
+            int[,] valoresEsperados = new int[4, 4];
+            int valor = 1;
+
+            //Aqui llenamos la matriz de los valores esperados
+            for (int i = 0; i < totalFilas; i++)
+                for (int j = 0; j < totalColumnas; j++)
+                {
+                    valoresEsperados[i, j] = valor;
+                    valor++;
+                }
+
+            //Al finalizar el juego, en la posición 4,4 se encuentra el 0
+            valoresEsperados[3, 3] = 0;
+            return valoresEsperados;
+        }
+
+
+
     }
 }

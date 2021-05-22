@@ -412,7 +412,7 @@ namespace OrdenaNumeros
                         matrizBotones[i, j].BackColor = Color.LightGray;
 
                     //El botón que tiene el 0 no deberá cambiar de color
-                    if(matrizValores[i, j]==0)
+                    if (matrizValores[i, j] == 0)
                         matrizBotones[i, j].BackColor = Color.LightGray;
                 }
         }

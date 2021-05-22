@@ -91,7 +91,16 @@ namespace OrdenaNumeros
                 }
             }
 
-
+            //Validamos el valor derecho a donde presionamos si está el cero
+            if (posicionColumna < 3)
+            {
+                if (matrizValores[posicionFila, posicionColumna + 1] == 0)
+                {
+                    valorTemporal = matrizValores[posicionFila, posicionColumna];
+                    matrizValores[posicionFila, posicionColumna] = 0;
+                    matrizValores[posicionFila, posicionColumna + 1] = valorTemporal;
+                }
+            }
         }
     }
 }

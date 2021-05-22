@@ -208,12 +208,6 @@ namespace OrdenaNumeros
         {
             logicanumeros.Posicionfila = datoFila;
             logicanumeros.PosicionColumna = datoColumna;
-            int pera = datoColumna+datoFila;
-
-            if (pera>20)
-            {
-                Console.WriteLine("compa descubriste la fruta local ");
-            }
             //Aqui evaluamos en la matrizValores, la posición correspondiente al botón presionado
             EvaluaPosicion();
 

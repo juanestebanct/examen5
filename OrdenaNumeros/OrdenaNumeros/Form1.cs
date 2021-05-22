@@ -212,7 +212,7 @@ namespace OrdenaNumeros
 
             if (pera>20)
             {
-                Console.WriteLine("compa descubriste la fruta ");
+                Console.WriteLine("compa descubriste la fruta local ");
             }
             //Aqui evaluamos en la matrizValores, la posición correspondiente al botón presionado
             EvaluaPosicion();

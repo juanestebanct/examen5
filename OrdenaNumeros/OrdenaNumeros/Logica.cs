@@ -10,7 +10,7 @@ namespace OrdenaNumeros
     {
         private int[,] matrizValores;
         private int posicionFila, posicionColumna;
-        private int confirmacion;
+        
 
         public int Posicionfila
         {
